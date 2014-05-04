@@ -1,0 +1,121 @@
+body {
+	background-color: #D1E0E0;
+}
+.menu-wrapper {
+	height: 100%;
+	max-width: 800px;
+	background-color: #85ADAD;
+	padding: 10px;
+}
+.canvas-wrapper {
+	width:80%;
+	text-align: center;
+	margin: 0 10%;
+}
+.menu-options {
+	background-color: #85ADAD;
+	margin-bottom: 45px;
+}
+.active {
+	border: 3px solid #FF4719;
+}
+
+h1, h2 {
+	color: #FF4719;
+}
+
+h1, h2, p, label, a, input {
+	font-family: arial;
+}
+
+h1 {
+	text-align: center;
+}
+
+section {
+	padding: 15px;
+	max-width: 800px;
+}
+
+select {
+	margin-bottom: 15%;
+}
+
+#choose-time {
+	margin-top: 5%;
+}
+
+.column {
+	width: 20%; 
+	float: left;
+}
+
+.label-wrapper {
+	padding: 2% 0;
+}
+
+#canvas-zebra {
+	border: 1px dotted;
+}
+
+#canvas-clock {
+	max-width: 600px;
+}
+
+a, button {
+	padding: 10px;
+	float: left;
+	font-size: 1.4em;
+	font-weight: bold;
+	background: #D1E0E0;
+	color: #FF4719;
+	border: none;
+	text-decoration: none;
+}
+
+button {
+	background: #85ADAD;
+	margin: 18px 15px 0 0;
+	color: #8414CF;
+	cursor: pointer;
+}
+
+.right-menu-item {
+	float: right;
+}
+
+.hide {
+	display: none;
+}
+
+#random-time, #clock-time, label, p {
+	color: #8414CF;
+	font-size: 1.2em;
+}
+
+input {
+	font-size: 1.4em;
+	width: 40%;
+	margin-bottom: 18px;
+}
+
+.choose-color {
+	width: 33.3%;
+	float: left;
+}
+
+button.color-choice {
+	width: 15%;
+	height: 35px;
+	margin-bottom: 18px;
+}
+
+button.check, button.level {
+	margin-bottom: 18px;
+}
+
+.active-level {
+	border: 3px solid #8414CF;
+}
+
+
