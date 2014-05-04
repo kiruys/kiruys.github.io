@@ -3,9 +3,9 @@ $(document).ready(function () {
 	$('select#hours').on('change', setClock);
 	$('select#minutes').on('change', setClock);
 
-	canvas.addEventListener('mousedown', turnOn);
-	canvas.addEventListener('mousemove', moveHand);
-	canvas.addEventListener('mouseup', turnOff);
+	canvas.addEventListener('touchstart', turnOn);
+	canvas.addEventListener('touchmove', moveHand);
+	canvas.addEventListener('touchend', turnOff);
 
 	/**
 	 * reads the value of the hour and minute dropdowns and sets the clock accordingly.
