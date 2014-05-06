@@ -61,19 +61,17 @@ $(document).ready(function () {
 	function getTouchCoords(evt) {
 		var x, y;
 
-		alert(evt.changedTouches[0].pageX);
+		if (evt.changedTouches[0].pageX || evt.changedTouches[0].pageY) { 
+			x = evt.changedTouches[0].pageX;
+			y = evt.changedTouches[0].pageY;
+		}
 
-		// if (evt.pageX || evt.pageY) { 
-		// 	x = evt.pageX;
-		// 	y = evt.pageY;
-		// }
+		x -= canvas.offsetLeft;
+		y -= canvas.offsetTop;
+		x *= 500/$('#canvas-clock').width();
+		y *= 500/$('#canvas-clock').height();
 
-		// x -= canvas.offsetLeft;
-		// y -= canvas.offsetTop;
-		// x *= 500/$('#canvas-clock').width();
-		// y *= 500/$('#canvas-clock').height();
-
-		// return {x: x, y: y};
+		return {x: x, y: y};
 	}
 
 	/**
@@ -96,7 +94,7 @@ $(document).ready(function () {
 		}
 
 		if (hands.active === 'hour') {
-			coords = getClickCoords(evt);
+			coords = getTouchCoords(evt);
 			newAngle = getAngle(coords.x, coords.y);
 			if (newAngle !== hands.hour.angle) {
 				hands.hour.angle = newAngle;
@@ -108,7 +106,7 @@ $(document).ready(function () {
 		}
 
 		if (hands.active === 'minute') {
-			coords = getClickCoords(evt);
+			coords = getTouchCoords(evt);
 			newAngle = resetAngle(getAngle(coords.x, coords.y));
 			if (newAngle !== hands.minute.angle) {
 				hands.minute.angle = newAngle;
