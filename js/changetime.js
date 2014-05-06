@@ -27,7 +27,8 @@ $(document).ready(function () {
 	function turnOn(evt) {
 		var startCoords;
 		evt.preventDefault();
-		startCoords = getClickCoords(evt);
+		//startCoords = getClickCoords(evt);
+		startCoords = getTouchCoords(evt);
 
 		if (hands.on === false) {
 			hands.on = true;
@@ -55,6 +56,24 @@ $(document).ready(function () {
 		y *= 500/$('#canvas-clock').height();
 
 		return {x: x, y: y};
+	}
+
+	function getTouchCoords(evt) {
+		var x, y;
+
+		alert(evt.changedTouches[0].pageX);
+
+		// if (evt.pageX || evt.pageY) { 
+		// 	x = evt.pageX;
+		// 	y = evt.pageY;
+		// }
+
+		// x -= canvas.offsetLeft;
+		// y -= canvas.offsetTop;
+		// x *= 500/$('#canvas-clock').width();
+		// y *= 500/$('#canvas-clock').height();
+
+		// return {x: x, y: y};
 	}
 
 	/**
