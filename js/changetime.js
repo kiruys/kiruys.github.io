@@ -1,11 +1,18 @@
 $(document).ready(function () {
 
+	var isTouchSupported, startEvent, moveEvent, endEvent;
+
+	isTouchSupported = 'ontouchstart' in window;
+	startEvent = isTouchSupported ? 'touchstart' : 'mousedown';
+	moveEvent = isTouchSupported ? 'touchmove' : 'mousemove';
+	endEvent = isTouchSupported ? 'touchend' : 'mouseup';
+
 	$('select#hours').on('change', setClock);
 	$('select#minutes').on('change', setClock);
 
-	canvas.addEventListener('touchstart', turnOn);
-	canvas.addEventListener('touchmove', moveHand);
-	canvas.addEventListener('touchend', turnOff);
+	canvas.addEventListener(startEvent, turnOn);
+	canvas.addEventListener(moveEvent, moveHand);
+	canvas.addEventListener(endEvent, turnOff);
 
 	/**
 	 * reads the value of the hour and minute dropdowns and sets the clock accordingly.
@@ -27,14 +34,24 @@ $(document).ready(function () {
 	function turnOn(evt) {
 		var startCoords;
 		evt.preventDefault();
-		//startCoords = getClickCoords(evt);
-		startCoords = getTouchCoords(evt);
-
-		if (hands.on === false) {
-			hands.on = true;
-			hands.active = matchClickCoords(startCoords.x, startCoords.y);
-			return;
+		if (!isTouchSupported) {
+			startCoords = getClickCoords(evt);
+			if (hands.on === false) {
+				hands.on = true;
+				hands.active = matchClickCoords(startCoords.x, startCoords.y);
+				return;
+			}
 		}
+		if (isTouchSupported) {
+			startCoords = getTouchCoords(evt);
+			if (hands.on === false) {
+				hands.on = true;
+				hands.active = matchClickCoords(startCoords.x, startCoords.y);
+				return;
+			}
+		}
+		
+
 	}
 
 	/**
@@ -94,7 +111,7 @@ $(document).ready(function () {
 		}
 
 		if (hands.active === 'hour') {
-			coords = getTouchCoords(evt);
+			coords = getClickCoords(evt);
 			newAngle = getAngle(coords.x, coords.y);
 			if (newAngle !== hands.hour.angle) {
 				hands.hour.angle = newAngle;
@@ -106,7 +123,13 @@ $(document).ready(function () {
 		}
 
 		if (hands.active === 'minute') {
-			coords = getTouchCoords(evt);
+			if (isTouchSupported) {
+				coords = getTouchCoords(evt);
+			}
+			if (!isTouchSupported) {
+				coords = getClickCoords(evt);
+			}
+			
 			newAngle = resetAngle(getAngle(coords.x, coords.y));
 			if (newAngle !== hands.minute.angle) {
 				hands.minute.angle = newAngle;
