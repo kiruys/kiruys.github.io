@@ -30,6 +30,7 @@ h1, h2, p, label, a, input {
 
 h1 {
 	text-align: center;
+
 }
 
 section {
@@ -65,7 +66,9 @@ select {
 a, button {
 	padding: 10px;
 	float: left;
-	font-size: 1.4em;
+	/*font-size: 1.4em;
+	font-size: 36px; Some tweener fallback that doesn't look awful */ 
+  	font-size: 2.6vw; 
 	font-weight: bold;
 	background: #D1E0E0;
 	color: #FF4719;
