@@ -8,6 +8,8 @@ $(document).ready(function () {
 	function activateLevel() {
 		var level = localStorage['level'];
 		if (level === undefined) {
+			localStorage['level'] = '1';
+			console.log(localStorage['level'])
 			return;
 		}
 		if (level !== undefined) {

@@ -111,7 +111,13 @@ $(document).ready(function () {
 		}
 
 		if (hands.active === 'hour') {
-			coords = getClickCoords(evt);
+			if (isTouchSupported) {
+				coords = getTouchCoords(evt);
+			}
+			if (!isTouchSupported) {
+				coords = getClickCoords(evt);
+			}
+			
 			newAngle = getAngle(coords.x, coords.y);
 			if (newAngle !== hands.hour.angle) {
 				hands.hour.angle = newAngle;

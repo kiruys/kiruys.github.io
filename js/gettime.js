@@ -66,7 +66,6 @@ $(document).ready(function () {
 		clockHour = getHour(hourAngle);
 		clockHourExt = getHour(hourAngleExt);
 		clockMinutes = Math.round(getMinutes(minuteAngle));
-		console.log(clockMinutes, randomTime.minutes);
 
 		if (checkMinutes(clockMinutes) & checkHour(clockHour, clockHourExt)) {
 			
