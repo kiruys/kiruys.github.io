@@ -4,8 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="clock.css">
-	<link rel="stylesheet" type="text/css" href="colors.css">
+	<link rel="stylesheet" type="text/css" href="css/clock.css">
+	<link rel="stylesheet" type="text/css" href="css/colors.css">
+	<link rel="stylesheet" type="text/css" href="css/icons.css">
 
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/drawclock.js"></script>
@@ -17,16 +18,17 @@
 </head>
 	<body>
 		<div class="menu-wrapper">
-			<a href="" data-link="read">Lees de klok</a>
-			<a href="" class="right-menu-item" data-link="set">Zet de klok</a>
+			<a href="" data-link="read"><span class="icon-numbered-list"></span></a>
+			<a href="" class="right-menu-item" data-link="set"><span class="icon-history"></span></a>
 			<div class="canvas-wrapper">
 				<canvas id="canvas-clock" width="500" height="500" style="width:100%;height:100%;">
 				Canvas tag not supported
 				</canvas>
 			</div>
 			<div class="menu-options">
-				<a href="" data-link="color">Kleur de klok</a>
-				<a href="" class="right-menu-item" data-link="settings">Instellingen</a>
+
+				<a href="" data-link="color"><span class="icon-wand"></span></a>
+				<a href="" class="right-menu-item" data-link="settings"><span class="icon-cogs"></span></a>
 			</div>
 			<div class="clear"> </div>
 		</div>

@@ -23,7 +23,7 @@ $(document).ready(function () {
 		evt.preventDefault();
 		var id = $(evt.target).data('link');
 		$('a[data-link]').removeClass('active');
-		$(evt.target).addClass('active');
+		$(evt.target).closest('a').addClass('active');
 
 		$('.menu-item').each(function(index) {
 			if($(this).attr('id') === id) {
