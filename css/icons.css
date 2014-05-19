@@ -17,6 +17,9 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+	/*font-size: 1.4em;
+	font-size: 36px; Some tweener fallback that doesn't look awful */ 
+  	font-size: 2.6vw;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
@@ -35,3 +38,8 @@
 .icon-numbered-list:before {
 	content: "\e602";
 }
+.icon-menu:before {
+	content: "\e604";
+	font-weight: normal;
+}
+

@@ -1,21 +1,36 @@
 body {
-	background-color: #D1E0E0;
+	background-color:#E5E4E2;
 }
-.menu-wrapper {
+
+.content-wrapper {
 	/*height: 100%;*/
 	max-width: 800px;
 	max-height: 800px;
-	background-color: #85ADAD;
-	padding: 10px;
+	background-color: #A9A9A9;
+	padding: 2%;
+}
+
+.navigation {
+	margin-right: 1%;
+	float: left;
+}
+
+.nav-wrapper {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 .canvas-wrapper {
-	width:80%;
+	width:60%;
+	float: left;
 	text-align: center;
-	margin: 0 10%;
 }
-.menu-options {
-	background-color: #85ADAD;
+
+.instruction {
+	width: 30%;
+	float: left;
 }
+
 .clear {
 	clear: both;
 }
@@ -25,9 +40,10 @@ body {
 
 h1, h2 {
 	color: #FF4719;
+	font-size: 2vw;
 }
 
-h1, h2, p, label, a, input {
+h1, h2, p, label, a, input, select {
 	font-family: arial;
 }
 
@@ -39,10 +55,12 @@ h1 {
 section {
 	padding: 15px;
 	max-width: 800px;
+	background: #E5E4E2;
 }
 
 select {
 	margin-bottom: 15%;
+	font-size: 1.6vw;
 }
 
 #choose-time {
@@ -67,28 +85,32 @@ select {
 	max-height: 600px;
 }
 
+.menu-option {
+	display: block;
+	margin-top: -2px;
+	//padding: 15%;
+}
+
 a, button {
-	padding: 10px;
-	float: left;
-	/*font-size: 1.4em;
-	font-size: 36px; Some tweener fallback that doesn't look awful */ 
-  	font-size: 2.6vw; 
-	font-weight: bold;
-	background: #D1E0E0;
+	padding: 15px;
+	//float: left;
+	font-size: 2.0vw;
+	display: block;
+}
+
+a {
+	background: #E5E4E2;
 	color: #FF4719;
-	border: none;
+	border: 3px solid #FF4719;
 	text-decoration: none;
 }
 
 button {
-	background: #85ADAD;
+	background: #A9A9A9;
 	margin: 18px 15px 0 0;
-	color: #8414CF;
+	color: #FFF;
 	cursor: pointer;
-}
-
-.right-menu-item {
-	float: right;
+	border: none;
 }
 
 .hide {
@@ -107,14 +129,15 @@ input {
 }
 
 .choose-color {
-	width: 33.3%;
+	//width: 33.3%;
 	float: left;
 }
 
 button.color-choice {
-	width: 15%;
+	//width: 15%;
 	height: 35px;
-	margin-bottom: 18px;
+	margin: 0 10px 2px 0;
+	float: left;
 }
 
 button.check, button.level {

@@ -29,23 +29,23 @@ $(document).ready(function () {
 
 	function matchInputWithClock() {
 		var hourDif, minuteDif;
-		hourDif = $('input#hour').val() - getHour(resetAngle(hands.hour.angle));
-		minuteDif = $('input#minute').val() - getMinutes(resetAngle(hands.minute.angle));
+		hourDif = $('#hour').val() - getHour(resetAngle(hands.hour.angle));
+		minuteDif = $('#minute').val() - getMinutes(resetAngle(hands.minute.angle));
 		if (hourDif === 0 & minuteDif === 0) {
 			alert('Goed zo!');
 			generateHandAngles();
 			drawClock();
 			setHands();
-			$('input#hour').val('');
-			$('input#minute').val('');
+			$('#hour').val('');
+			$('#minute').val('');
 		}
 		else {
 			alert('Probeer het nog eens');
 			if (hourDif !== 0) {
-				$('input#hour').val('');
+				$('#hour').val('');
 			}
 			if (minuteDif !== 0) {
-				$('input#minute').val('');
+				$('#minute').val('');
 			}
 		}
 	}

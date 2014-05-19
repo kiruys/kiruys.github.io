@@ -1,8 +1,10 @@
 $(document).ready(function () {
 
+	var menuState = true;
+
 	activateLevel();
 
-	$('a[data-link]').on('click', showChoice);
+	$('a[data-link]').on('click', toggleMenu);
 	$('button[data-level]').on('click', setLevel);
 
 	function activateLevel() {
@@ -19,12 +21,25 @@ $(document).ready(function () {
 		}
 	}
 
-	function showChoice(evt) {
+	function toggleMenu(evt) {
 		evt.preventDefault();
-		var id = $(evt.target).data('link');
-		$('a[data-link]').removeClass('active');
-		$(evt.target).closest('a').addClass('active');
+		var id = $(evt.target).closest('a').data('link');
 
+		if (menuState) {
+			$('.menu-option').show();
+			menuState = false;
+			return;
+		}
+		if (!menuState) {
+			$('.menu-option').hide();
+			$(evt.target).closest('.menu-option').show();
+			showChoice(id);
+			menuState = true;
+			return;
+		}
+	}
+
+	function showChoice(id) {
 		$('.menu-item').each(function(index) {
 			if($(this).attr('id') === id) {
 				$(this).find('input').val('');
