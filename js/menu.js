@@ -76,7 +76,7 @@ $(document).ready(function () {
 			steps = 4;
 		}
 		if (level === '3') {
-			steps = 12;
+			steps = 60;
 		}
 
 		for (var i = 0; i < steps; i++) {
