@@ -32,6 +32,7 @@ $(document).ready(function () {
 		hourDif = $('#hour').val() - getHour(resetAngle(hands.hour.angle));
 		minuteDif = $('#minute').val() - getMinutes(resetAngle(hands.minute.angle));
 		if (hourDif === 0 & minuteDif === 0) {
+			changeScore();
 			alert('Goed zo!');
 			generateHandAngles();
 			drawClock();

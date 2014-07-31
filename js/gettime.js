@@ -14,12 +14,13 @@ $(document).ready(function () {
 							font : '30px Comic Sans MS'
 						}
 			};
+	
 
 	// balloonCanvas = document.getElementById("canvas-balloon");
 	// balloonCxt = balloonCanvas.getContext('2d');
 
 	generateTime();
-
+	
 	// if (balloonCanvas.getContext){
 	// 	drawBalloon();
 		
@@ -68,8 +69,9 @@ $(document).ready(function () {
 		clockMinutes = Math.round(getMinutes(minuteAngle));
 
 		if (checkMinutes(clockMinutes) & checkHour(clockHour, clockHourExt)) {
-			
+			changeScore();
 			alert('Goed zo!');
+			
 			generateTime();
 			//drawText('positive');
 			return;
@@ -125,4 +127,6 @@ $(document).ready(function () {
 	function clearText() {
 		balloonCxt.clearRect(0, 0, balloonCanvas.width, balloonCanvas.height);
 	}
+
+
 });

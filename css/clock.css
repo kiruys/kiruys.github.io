@@ -31,6 +31,17 @@ body {
 	float: left;
 }
 
+.score {
+	background: #E5E4E2;
+	width: 90%;
+	padding: 1px;
+	margin: auto;
+}
+
+.score-field {
+	color: #8414CF;
+}
+
 .clear {
 	clear: both;
 }
