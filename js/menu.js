@@ -3,6 +3,7 @@ $(document).ready(function () {
 	var menuState = true;
 
 	activateLevel();
+	setMinuteDropdown();
 
 	$('a[data-link]').on('click', toggleMenu);
 	$('button[data-level]').on('click', setLevel);
@@ -54,6 +55,34 @@ $(document).ready(function () {
 	function setLevel(evt) {
 		localStorage['level'] = $(evt.target).data('level');
 		activateLevel();
+		setMinuteDropdown();
+	}
+
+	function setMinuteDropdown() {
+		var level, $minuteOptions;
+		level = localStorage['level'];
+		$minuteOptions = $('select#minute');
+
+		$minuteOptions.find('option').each(function(i, option) {
+			if ($(option).val() !== "" ) {
+				$(option).remove();
+			}
+		});
+
+		if (level === '1') {
+			steps = 2;
+		}
+		if (level === '2') {
+			steps = 4;
+		}
+		if (level === '3') {
+			steps = 12;
+		}
+
+		for (var i = 0; i < steps; i++) {
+			var value = 60/steps * i;
+			$minuteOptions.append($('<option />').val(value).text(value));
+		}
 	}
 
 });
