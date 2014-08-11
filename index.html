@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/clock.css">
 	<link rel="stylesheet" type="text/css" href="css/colors.css">
 	<link rel="stylesheet" type="text/css" href="css/icons.css">
@@ -39,86 +40,91 @@
 				</ul>
 			</div>
 			<div class="canvas-wrapper">
-				<div class="score">
-					<h2>Score: <span class="score-field"></span></h2>
-				</div>
 				<canvas id="canvas-clock" width="500" height="500" style="width:100%;height:100%;">
 				Canvas tag not supported
 				</canvas>
 			</div>
-			<div class="instruction">
-				<section id="home" class="menu-item">
-					<h2>De klok staat nu op: </h2>
-					<p id="clock-time">9 uur en 0 minuten</p>
-				</section>
-				<section id="set" class="hide menu-item">
-					<h2>Beweeg de wijzers, zet de klok op:</h2>
-					<p id="random-time">9 uur en 0 minuten</p>
-					<button id="check-time" type="button" class="check">Check de tijd</button>
-					<button id="new-time" type="button" class="check">Nieuwe tijd</button>
-				</section>
-				<section id="read" class="hide menu-item">
-					<h2>Hoe laat is het op de klok?</h2>
-						<div class="label-wrapper">
-							<label for="hour">Kies het uur: </label>
+			<div class="info-column">
+				<div class="instruction">
+					<section id="home" class="menu-item">
+						<h2>De klok staat nu op: </h2>
+						<p id="clock-time">9 uur en 0 minuten</p>
+					</section>
+					<section id="set" class="hide menu-item">
+						<h2>Beweeg de wijzers, zet de klok op:</h2>
+						<p id="random-time">9 uur en 0 minuten</p>
+						<button id="check-time" type="button" class="check">Check de tijd</button>
+						<button id="new-time" type="button" class="check">Nieuwe tijd</button>
+					</section>
+					<section id="read" class="hide menu-item">
+						<h2>Hoe laat is het op de klok?</h2>
+							<div class="label-wrapper">
+								<label for="hour">Kies het uur: </label>
+							</div>
+							<select id="hour">
+								 <option value="" selected="selected">--</option>
+								 <option value="1">1</option>
+								 <option value="2">2</option>
+								 <option value="3">3</option>
+								 <option value="4">4</option>
+								 <option value="5">5</option>
+								 <option value="6">6</option>
+								 <option value="7">7</option>
+								 <option value="8">8</option>
+								 <option value="9">9</option>
+								 <option value="10">10</option>
+								 <option value="11">11</option>
+								 <option value="12">12</option>
+							</select>
+							<div class="label-wrapper">
+								<label for="minute">Kies de minuten:</label>
+							</div>
+							<select id="minute">
+								<option value="" selected="selected">--</option>
+							</select>
+							<button id="check-input" type="button">GA!</button>
+					</section>
+					<section id="color" class="hide menu-item">
+						<h2>Kies de kleuren van de klok</h2>
+						<div data-color="clock" class="choose-color">
+							<p>Kies de kleur van de wijzerplaat</p>
+							<button id="pink" class="color-choice" type="button"></button>
+							<button id="lightgreen" class="color-choice" type="button"></button>
+							<button id="orange" class="color-choice" type="button"></button>
+							<button id="yellow" class="color-choice" type="button"></button>
 						</div>
-						<select id="hour">
-							 <option value="" selected="selected">--</option>
-							 <option value="1">1</option>
-							 <option value="2">2</option>
-							 <option value="3">3</option>
-							 <option value="4">4</option>
-							 <option value="5">5</option>
-							 <option value="6">6</option>
-							 <option value="7">7</option>
-							 <option value="8">8</option>
-							 <option value="9">9</option>
-							 <option value="10">10</option>
-							 <option value="11">11</option>
-							 <option value="12">12</option>
-						</select>
-						<div class="label-wrapper">
-							<label for="minute">Kies de minuten:</label>
+						<div data-color="hands.minute" class="choose-color">
+							<p>Kies de kleur van de minutenwijzer</p>
+							<button id="white" class="color-choice" type="button"></button>
+							<button id="purple" class="color-choice" type="button"></button>
+							<button id="blue" class="color-choice" type="button"></button>
+							<button id="red" class="color-choice" type="button"></button>
 						</div>
-						<select id="minute">
-							<option value="" selected="selected">--</option>
-						</select>
-						<button id="check-input" type="button">GA!</button>
-				</section>
-				<section id="color" class="hide menu-item">
-					<h2>Kies de kleuren van de klok</h2>
-					<div data-color="clock" class="choose-color">
-						<p>Kies de kleur van de wijzerplaat</p>
-						<button id="pink" class="color-choice" type="button"></button>
-						<button id="lightgreen" class="color-choice" type="button"></button>
-						<button id="orange" class="color-choice" type="button"></button>
-						<button id="yellow" class="color-choice" type="button"></button>
-					</div>
-					<div data-color="hands.minute" class="choose-color">
-						<p>Kies de kleur van de minutenwijzer</p>
-						<button id="white" class="color-choice" type="button"></button>
-						<button id="purple" class="color-choice" type="button"></button>
-						<button id="blue" class="color-choice" type="button"></button>
-						<button id="red" class="color-choice" type="button"></button>
-					</div>
-					<div data-color="hands.hour" class="choose-color">
-						<p>Kies de kleur van de urenwijzer</p>
-						<button id="lightyellow" class="color-choice" type="button"></button>
-						<button id="gray" class="color-choice" type="button"></button>
-						<button id="darkblue" class="color-choice" type="button"></button>
-						<button id="green" class="color-choice" type="button"></button>
-					</div>
-					<div class="clear"> </div>
-				</section>
-				<section id="settings" class="hide menu-item">
-					<h2>Kies jouw level</h2>
-					<button data-level="1" class="level active-level" type="button">1: hele en halve uren</button>
-					<button data-level="2" class="level" type="button">2: kwartieren</button>
-					<button data-level="3" class="level" type="button">3: minuten</button>
-				</section>
+						<div data-color="hands.hour" class="choose-color">
+							<p>Kies de kleur van de urenwijzer</p>
+							<button id="lightyellow" class="color-choice" type="button"></button>
+							<button id="gray" class="color-choice" type="button"></button>
+							<button id="darkblue" class="color-choice" type="button"></button>
+							<button id="green" class="color-choice" type="button"></button>
+						</div>
+						<div class="clear"> </div>
+					</section>
+					<section id="settings" class="hide menu-item">
+						<h2>Kies jouw level</h2>
+						<button data-level="1" class="level active-level" type="button">1: hele en halve uren</button>
+						<button data-level="2" class="level" type="button">2: kwartieren</button>
+						<button data-level="3" class="level" type="button">3: minuten</button>
+					</section>
 
+				</div>
+				<section class="score">
+					<h2>Score: <span class="score-field"></span></h2>
+				</section>
 			</div>
+
+
 			<div class="clear"> </div>
+
 
 		</div>
 		

@@ -1,0 +1,24 @@
+@media only screen 
+and (max-width : 767px) {
+	.canvas-wrapper {
+		width: 80%;
+	}
+	.info-column {
+		width: 100%;
+		min-width: 200px;
+		display: table;
+	}
+	
+}
+
+@media only screen 
+and (min-width : 768px) {
+	.canvas-wrapper {
+		width: 60%;
+	}
+	.info-column {
+		width: 30%;
+		float: right;
+	}
+
+}
