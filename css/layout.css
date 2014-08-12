@@ -8,6 +8,12 @@ and (max-width : 767px) {
 		min-width: 200px;
 		display: table;
 	}
+	h2 {
+		font-size: 3vw;
+	}
+	[class^="icon-"], [class*=" icon-"] {
+		font-size: 5vw;
+	}
 	
 }
 
@@ -20,5 +26,10 @@ and (min-width : 768px) {
 		width: 30%;
 		float: right;
 	}
-
+	h2 {
+		font-size: 2vw;
+	}
+	[class^="icon-"], [class*=" icon-"] {
+		font-size: 3.6vw;
+	}
 }
