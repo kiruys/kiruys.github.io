@@ -1,5 +1,5 @@
 @media only screen 
-and (max-width : 767px) {
+and (max-width : 1536px) {
 	.canvas-wrapper {
 		width: 80%;
 	}
@@ -18,7 +18,7 @@ and (max-width : 767px) {
 }
 
 @media only screen 
-and (min-width : 768px) {
+and (min-width : 1537px) {
 	.canvas-wrapper {
 		width: 60%;
 	}
