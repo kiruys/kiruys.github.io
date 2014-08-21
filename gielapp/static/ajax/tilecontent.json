@@ -1,0 +1,65 @@
+{"items" : [
+	{	"icon": "bullhorn",
+		"title": "Jouw hoogtepunt op #LL14",
+		"bgcolor": "",
+		"fontcolor": "#ffff00",
+		"photo": "lowlands-lessdark.jpg",
+		"itemTitle": "Ga je gang",
+		"subTitle": "En deel jouw muziek hoogtepunt!",
+		"itemContent": "<p>Neem de band op die jij te gek vindt...</p><div class='recorder'><div class='top'></div><div class='bottom'></div><p>10:00</p><button class='pink'>Record</button></div>",
+		"alert": "Jouw hoogtepunt kan nog niet worden opgenomen..."
+	},
+	{	"icon": "",
+		"title": "Wie verdient een liedje?",
+		"bgcolor": "#ffff00",
+		"fontcolor": "#000",
+		"photo": ""
+	},
+	{	"icon": "camera",
+		"title": "Ruben Hein is er",
+		"bgcolor": "",
+		"fontcolor": "#fff",
+		"photo": "rubenHein.jpg",
+		"itemTitle":"Ruben Hein!",
+		"subTitle": "",
+		"itemContent": "<img src='/static/img/rubenHein2.jpg'>"
+	},
+	{	"icon": "camera2",
+		"title": "",
+		"bgcolor": "#A9F5F2",
+		"fontcolor": "pink",
+		"photo": ""
+	},
+	{	"icon": "bullhorn",
+		"title": "Goedemorgen",
+		"bgcolor": "",
+		"fontcolor": "#d4008c",
+		"photo": "goedemorgen.jpg",
+		"itemTitle": "Goedemorgen!",
+		"subTitle": "Spreek em in!",
+		"itemContent": "<p>Schraap je keel en geef me jouw goedemorgen...</p><div class='recorder'><div class='top'></div><div class='bottom'></div><p>10:00</p><button class='pink'>Record</button></div>",
+		"alert": "Jouw goedemorgen kan nog niet worden opgenomen..."
+	},
+	{	"icon": "",
+		"title": "Stuur me een appje!",
+		"bgcolor": "#A9F5F2",
+		"fontcolor": "#d4008c",
+		"photo": "",
+		"itemTitle": "Vertel het me...",
+		"subTitle": "Stuur me een appje!",
+		"itemContent": "<textarea placeholder='Vertel het me...'></textarea><button class='grey'>Versturen</button>",
+		"alert": "Jouw appje kan nog niet worden verzonden..."
+	},
+		{	"icon": "camera",
+		"title": "Stuur je foto!",
+		"bgcolor": "#ffff00",
+		"fontcolor": "#d4008c",
+		"photo": "cameraLens.jpg",
+		"itemTitle":"Jouw Foto!",
+		"subTitle": "Welke foto wil je met me delen",
+		"itemContent": "<p>Verras met jouw kiekje... Ik ben benieuwd wat je me stuurt!</p><button class='pink'><table><tr><td class='outer'><span class='icon-camera icons'></span></td><td>Maak nu een foto</td><td class='outer'></td></tr></table></button><button class='white'><table><tr><td class='outer'><span class='icon-image icons'></span></td><td>Kies een bestaande foto</td><td class='outer'></td></tr></table></button>",
+		"alert": "Jouw kiekje kan nog niet worden gemaakt..."
+	}
+
+	]
+}

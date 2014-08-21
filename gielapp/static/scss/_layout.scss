@@ -1,0 +1,133 @@
+
+
+.three-columns {
+	width: 33.333%;
+	float: left;
+}
+
+.playlist {
+	float: right;
+}
+
+.logo {
+	margin-top: 5%;
+	text-align: center;
+	.giel-logo {
+		width: 100%;
+		max-width: 200px;
+	}
+}
+
+.tile-wrapper {
+	width: 99%;
+	margin: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.tile {
+	
+	background-color: $base-bgcolor;
+	background-size:100%;
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 30vw;
+    height: 30vw;
+	margin: auto;
+	border-radius: 5px;
+	position: relative;
+
+	h2 {
+		position: absolute;
+		bottom: -2vw;
+	}
+	span.icons {
+		opacity: 0;
+	}
+}
+
+.item-wrapper {
+	display: none;
+    h2 {
+		font-size: 5vw;
+		border-top: 3px solid $base-color;
+		border-bottom: 3px solid $base-color;
+		border-bottom-radius: 3px;
+		line-height: 0;
+		padding: 2% 0;
+    }
+    span.pink-icon {
+		background-color: #d4008c;
+		font-size: 3vw;
+		padding: 1vw;
+		border-radius: 5px;
+		margin-right: 2vw;
+    }
+}
+
+.content {
+	margin: 0 10%;
+	button.pink {
+		background-color: $highlight-color4;
+		color: $base-color;
+	}
+	button.white {
+		background-color: $base-color;
+		color: $highlight-color4;
+	}
+	button.grey {
+		background-color: $alt-bgcolor;
+		color: $base-color;
+	}
+	img {
+		width: 100%;
+	}
+	h3 {
+		text-align: center;
+	}
+	.recorder {
+		width: 90%;
+		height: 100%;
+		border-radius: 1vw;
+		background-color: $base-color;
+		text-align: center;
+		padding: 5%;
+		margin-top: 10%;
+		button {
+			width: 40%;
+			position: relative;
+			bottom: 0vw;
+		}
+		.top {
+			margin: 1% auto;
+			background-color: $highlight-color2;
+			border: 2px solid rgba(92, 88, 88, .2);
+			border-top-left-radius: 1vw;
+			border-top-right-radius: 1vw;
+			width: 96%;
+			height: 8vw;
+		}
+		.bottom {
+			margin: -2% auto;
+			background-color: $highlight-color2;
+			border-bottom: 2px solid rgba(92, 88, 88, .2);
+			border-left: 2px solid rgba(92, 88, 88, .2);
+			border-right: 2px solid rgba(92, 88, 88, .2);
+			border-top: 1px solid rgba(92, 88, 88, .2);
+			border-bottom-left-radius: 1vw;
+			border-bottom-right-radius: 1vw;
+			width: 96%;
+			height: 8vw;
+		}
+
+		.line {
+			border-top: 2px solid rgba(92, 88, 88, .2);
+		}
+		p {
+			color: $alt-color;
+			font-size: 6vw;
+		}
+	}
+}

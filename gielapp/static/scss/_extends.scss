@@ -1,0 +1,126 @@
+/* file for mixins & extends */
+// Mobile First mixin
+@mixin mq($size, $allowIE:false) {
+	@if $ie {
+		@if $allowIE == true {
+			@content;
+		}
+	} @else if $size == "xs" {
+		@media (min-width:400px) {
+			@content;
+		}
+	} @else if $size == "s" {
+		@media (min-width:600px) {
+			@content;
+		}
+	} @else if $size == "m" {
+		@media (min-width:800px) {
+			@content;
+		}
+	} @else if $size == "l" {
+		@media (min-width:1024px) {
+			@content;
+		}
+	}
+}
+
+
+// http://compass-style.org/reference/compass/helpers/sprites/
+@mixin get-sprite($map, $sprite, $offset-x: 0, $offset-y: 0, $repeat: no-repeat, $height: false, $width: false) {
+	$sprite-image: sprite-file($map, $sprite);
+	$sprite-map: sprite-url($map);
+	$sprite-position: sprite-position($map, $sprite, $offset-x, $offset-y);
+	// Returns background
+	background: $sprite-map $sprite-position $repeat;
+
+	// Checks to see if the user wants height returned
+	@if $height == true {
+		$sprite-height: image-height($sprite-image);
+		height: $sprite-height; }
+
+	// Checks to see if the user wants height returned
+	@if $width == true {
+		$sprite-width: image-width($sprite-image);
+		width: $sprite-width; }
+}
+
+// Silent classes
+%reset-list {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+@mixin textshadow($value){
+	text-shadow: $value;
+}
+
+/* Clearfix*/
+
+@mixin clearfix {
+	&:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}
+
+// for screenreaders
+/* Hide only visually, but have it available for screenreaders */
+@mixin visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	&.focusable
+		&:active, &:focus{
+			clip: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			position: static;
+			width: auto;
+		}
+}
+
+@mixin multicolumns($count, $gap){
+	-moz-column-count: $count;
+	-moz-column-gap: $gap;
+	-webkit-column-count: $count;
+	-webkit-column-gap: $gap;
+	column-count: $count;
+	column-gap: $gap;
+}
+
+@mixin transition($props){
+	-moz-transition:$props;
+	-webkit-transition:$props;
+	-o-transition:$props;
+	transition:$props;
+}
+
+@mixin no-select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+@mixin gradient100($topcolor, $btmcolor){
+	background: $topcolor; /* Old browsers */
+	background: -moz-linear-gradient(top, $topcolor 0%, $btmcolor 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$topcolor), color-stop(100%,$btmcolor)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $topcolor 0%,$btmcolor 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $topcolor 0%,$btmcolor 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $topcolor 0%,$btmcolor 100%); /* IE10+ */
+	background: linear-gradient(top, $topcolor 0%,$btmcolor 100%); /* W3C */
+}

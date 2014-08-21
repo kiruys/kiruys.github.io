@@ -1,0 +1,66 @@
+body {
+	background-color: black;
+	background-image: url('../img/bg-page-test.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+h1 {
+	font-size: 8vw;
+	text-align: center;
+	width: 40%;
+	margin: 0 auto;
+
+}
+
+h2 {
+	font-size: 4vw;
+    line-height: 4vw;
+	padding: 10%;
+}
+
+h3 {
+	font-size: 8vw;
+	line-height: 8vw;
+}
+
+p, table {
+	font-size: 4vw;
+}
+
+table, button {
+	font-size: 3.5vw;
+}
+
+button {
+	width: 100%;
+	border: none;
+	border-radius: 0.5vw;
+	padding: 6% 0;
+	margin-bottom: 1.6%;
+	table {
+		width: 100%;
+		td.outer {
+			width: 18%;
+		}
+		span.icons {
+			top: 0;
+		}
+	}
+
+}
+
+textarea {
+	-webkit-appearance: none;
+	width: 96%;
+    height: 10em;
+    border-radius: 0.2em;
+    border: 1px solid #fff;
+    outline: none;
+    resize: none;
+    color: $alt-bgcolor;
+    padding: 2%;
+    margin-bottom: 5%;
+    font-size: 3vw;
+}
+

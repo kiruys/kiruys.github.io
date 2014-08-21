@@ -1,0 +1,66 @@
+// typography
+#{headings(1,3)}, .h1, .h2, .h3 {
+	font-family:$special-font-alt;
+	font-weight:normal;
+	letter-spacing:0.01em;
+	line-height:1.2;
+}
+#{headings(1,6)} {
+	margin:0 0 5px 0;
+	&.focus {color:$highlight-color1;}
+	a:hover {background:$alt-bgcolor; text-decoration:none;}
+}
+#{headings(4,6)} {
+	font-family:$base-font-family;
+	margin-bottom:0;
+}
+
+// h1, .h1 {font-size:2.4em;}
+// h2, .h2 {font-size:1.69em;}
+// h3, .h3 {font-size:1.6em;}
+// h4, .h4 {font-size:1.4em;}
+// h5, .h5 {font-size:0.8em;}
+
+// h1, .h1 {font-size:2.33*$text-font-size;}
+h1, .h1 {font-size: 2.33*$text-font-size; margin: 0;}
+h2, .h2 {font-size: 2*$text-font-size;}
+h3, .h3 {font-size: 1.67*$text-font-size;}
+h4, .h4 {font-size: 1.083*$text-font-size;}
+// h6, .h6 {font-size:1.0em;}
+
+
+.subline {
+	font-family:$base-font-family;
+	padding:10px 0 0;
+}
+
+p, input, textarea, li, table {
+	@include adjust-font-size-to($text-font-size);
+
+	p, input, textarea, li, table {
+		font-size:100%;
+		line-height:1.5;
+	}
+	&.intro {
+		@include adjust-font-size-to(1.1 * $text-font-size);
+	}
+}
+
+a {
+	text-decoration:underline; color:$link-color;
+	&:active, &.active,	&:hover {text-decoration:underline;}
+}
+
+#{headings(1,6)}, li {
+	a {
+		text-decoration:none;
+	}
+}
+
+li {
+	a:hover {text-decoration:underline;}
+}
+
+.section-wrapper.highlight {
+	#{headings(1,6)} {padding:10px 0;}
+}
