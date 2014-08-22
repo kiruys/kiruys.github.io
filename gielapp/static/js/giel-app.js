@@ -1,6 +1,13 @@
+/**
+ * creates an overview of the giel-app items in tiles. Content for the items is retrieved with json.
+ * appropriate margins between tiles are computed and recomputed on window-resize.
+ */
+
+var tileContent;
+
 $(document).ready(function () {
 
-	var $tileRow, tileRowTemp, tileContent;
+	var $tileRow, tileRowTemp;
 
 	//prepare cloning of tiles 
 	$tileRow = $('.tile-row');
@@ -11,11 +18,6 @@ $(document).ready(function () {
 	setupTiles(4);
 	setMargins();
 	getTileContent();
-
-	$('.tile-wrapper').on('click', openItem);
-
-
-
 	
 	/**
 	 * draws the given number of tileRows using $tileRowTemp
@@ -31,8 +33,8 @@ $(document).ready(function () {
 	}
 
 	/**
-	 * extracts the content of each tile from tilecontent.json and inserts it into the tiles.
-	 * 
+	 * extracts the content of each tile from tilecontent.json, stores it in the global 
+	 * variable tileContent, and inserts it into the tiles.
 	 */
 	function getTileContent() {
 
@@ -47,9 +49,7 @@ $(document).ready(function () {
 				showIcon(i, tileContent[i].icon);
 				setPhoto(i, tileContent[i].photo);
 			}
-
 		});
-
 	}
 
 	function showIcon(tile, type) {	
@@ -84,46 +84,15 @@ $(document).ready(function () {
 		}
 	}
 
-	function openItem(evt) {
-		var i, tile, content;
-		tile = $(evt.target).closest('.tile');
-		i = $('.tile-wrapper .tile').index(tile);
-
-		if (tileContent[i].subTitle !== "") {
-			content = '<h3>' + tileContent[i].subTitle + '</h3>' + tileContent[i].itemContent;
-		}
-		else {
-			content = tileContent[i].itemContent;
-		}
-
-		$('.item-wrapper h2 span.item-title').text(tileContent[i].itemTitle)
-		$('.content').html(content);
-
-		$('.overview-wrapper').hide();
-		$('.item-wrapper').show();
-
-		$('button').on('click', showAlert);
-
-		function showAlert() {
-			alert(tileContent[i].alert);
-		}
-	}
-
-	// function closeItem() {
-	// 	$('.overview-wrapper').show();
-	// 	$('.item-wrapper').hide();
-	// }
-
-
-
 });
 
 $(window).resize(function(e) {
-
    setMargins();
-
 });
 
+/**
+ * computes and sets vertical margins between tiles based on horizontal margins between tiles.
+ */
 function setMargins() {
 	var val = $('.tile').offset().left - $('.tile-wrapper').offset().left;
 	$('.tile').each(function(){

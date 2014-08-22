@@ -1,18 +1,16 @@
-// make sure you have compass and css3 support:
+
 @import "compass";
 
+@import "_globals"; 	// variables (i.e. colors and fonts)
+@import "_base";		// styling for basic elements (e.g. body, headers, p etc)
 
-@import "_globals"; // import all variables (i.e. colors and fonts)
-@import "_base";
-
-@import "_fonts"; // @font-face imports
-@import "_layout";
+@import "_fonts";		// @font-face (i.e. icomoon)
+@import "_typography"; 	// font styling
+@import "_layout";		// styling exceptions based on context
 
 //@import "_extends"; // extend classes with silent selectors or mixins
-//@import "_normalize"; // base font size, margins, paddings and vertical rythm
-//@import "_grid"; // The responsive grid
 
-//@import "_typography"; // all font styling for headers, paragraphs, other general elements
+
 
 
 

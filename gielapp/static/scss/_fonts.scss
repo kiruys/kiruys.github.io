@@ -1,13 +1,3 @@
-h1, h2, h3 {
-    font-family: $special-font-family;
-    color: $base-color;
-}
-
-p {
-    font-family: $base-font-family;
-    color: $base-color; 
-}
-
 @font-face {
     font-family: 'icomoon';
     src:url('../fonts/icomoon.eot?-j6fltx');
@@ -68,39 +58,3 @@ p {
 }
 
 
-
-span.icons {
-    position: relative;
-    color: #5C5858;
-    background-color: #fff;
-    border-radius: 50%;
-    border:3px #fff solid;
-    padding: 2vw;
-    font-size: 4vw;
-    top: 3vw;
-}
-
-.tile {
-    span.icons {
-        padding: 1vw;
-        font-size: 3vw;
-        float: right;
-        top: 1vw;
-        right: 1vw;
-    }
-}
-
-.item-wrapper {
-    h2 {
-        border-top: 3px solid $base-color;
-        border-bottom: 3px solid $base-color;
-        padding: 1.5vw 0;
-    }
-    span.pink-icon {
-        background-color: #d4008c;
-        font-size: 3vw;
-        padding: 1vw;
-        border-radius: 5px;
-        margin-right: 2vw;
-    }
-}

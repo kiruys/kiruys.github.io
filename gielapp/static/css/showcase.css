@@ -1,11 +1,3 @@
-/*   
-CSS for: Project / klant
-URI: http://info.nl
-Description: Generic info setup
-Author: 
-Author URI: http://www.info.nl/
-Version: 1.0
-*/
 /* Variables */
 /* line 1, ../scss/_base.scss */
 body { background-color: black; background-image: url("../img/bg-page-test.jpg"); background-repeat: no-repeat; background-position: top center; }
@@ -34,116 +26,112 @@ button table td.outer { width: 18%; }
 /* line 46, ../scss/_base.scss */
 button table span.icons { top: 0; }
 
-/* line 53, ../scss/_base.scss */
+/* line 52, ../scss/_base.scss */
 textarea { -webkit-appearance: none; width: 96%; height: 10em; border-radius: 0.2em; border: 1px solid white; outline: none; resize: none; color: #bdbdbd; padding: 2%; margin-bottom: 5%; font-size: 3vw; }
-
-/* line 1, ../scss/_fonts.scss */
-h1, h2, h3 { font-family: "Alegreya", serif; color: white; }
-
-/* line 6, ../scss/_fonts.scss */
-p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white; }
 
 @font-face { font-family: 'icomoon'; src: url("../fonts/icomoon.eot?-j6fltx"); src: url("../fonts/icomoon.eot?#iefix-j6fltx") format("embedded-opentype"), url("../fonts/icomoon.woff?-j6fltx") format("woff"), url("../fonts/icomoon.ttf?-j6fltx") format("truetype"), url("../fonts/icomoon.svg?-j6fltx#icomoon") format("svg"); font-weight: normal; font-style: normal; }
 
-/* line 22, ../scss/_fonts.scss */
+/* line 12, ../scss/_fonts.scss */
 [class^="icon-"], [class*=" icon-"] { font-family: 'icomoon'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-/* line 36, ../scss/_fonts.scss */
+/* line 26, ../scss/_fonts.scss */
 .icon-image:before { content: "\e60a"; }
 
-/* line 39, ../scss/_fonts.scss */
+/* line 29, ../scss/_fonts.scss */
 .icon-camera:before { content: "\e600"; }
 
-/* line 42, ../scss/_fonts.scss */
+/* line 32, ../scss/_fonts.scss */
 .icon-music:before { content: "\e601"; }
 
-/* line 45, ../scss/_fonts.scss */
+/* line 35, ../scss/_fonts.scss */
 .icon-headphones:before { content: "\e605"; }
 
-/* line 48, ../scss/_fonts.scss */
+/* line 38, ../scss/_fonts.scss */
 .icon-play:before { content: "\e602"; }
 
-/* line 51, ../scss/_fonts.scss */
+/* line 41, ../scss/_fonts.scss */
 .icon-film:before { content: "\e606"; }
 
-/* line 54, ../scss/_fonts.scss */
+/* line 44, ../scss/_fonts.scss */
 .icon-camera2:before { content: "\e603"; }
 
-/* line 57, ../scss/_fonts.scss */
+/* line 47, ../scss/_fonts.scss */
 .icon-bullhorn:before { content: "\e607"; }
 
-/* line 60, ../scss/_fonts.scss */
+/* line 50, ../scss/_fonts.scss */
 .icon-feed:before { content: "\e608"; }
 
-/* line 63, ../scss/_fonts.scss */
+/* line 53, ../scss/_fonts.scss */
 .icon-list:before { content: "\e604"; }
 
-/* line 66, ../scss/_fonts.scss */
+/* line 56, ../scss/_fonts.scss */
 .icon-close:before { content: "\e609"; }
 
-/* line 72, ../scss/_fonts.scss */
-span.icons { position: relative; color: #5C5858; background-color: #fff; border-radius: 50%; border: 3px white solid; padding: 2vw; font-size: 4vw; top: 3vw; }
+/* line 1, ../scss/_typography.scss */
+h1, h2, h3 { font-family: "Alegreya", serif; color: white; }
 
-/* line 84, ../scss/_fonts.scss */
-.tile span.icons { padding: 1vw; font-size: 3vw; float: right; top: 1vw; right: 1vw; }
+/* line 6, ../scss/_typography.scss */
+p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white; }
 
-/* line 94, ../scss/_fonts.scss */
-.item-wrapper h2 { border-top: 3px solid white; border-bottom: 3px solid white; padding: 1.5vw 0; }
-/* line 99, ../scss/_fonts.scss */
-.item-wrapper span.pink-icon { background-color: #d4008c; font-size: 3vw; padding: 1vw; border-radius: 5px; margin-right: 2vw; }
-
-/* line 3, ../scss/_layout.scss */
+/* line 1, ../scss/_layout.scss */
 .three-columns { width: 33.333%; float: left; }
 
-/* line 8, ../scss/_layout.scss */
+/* line 6, ../scss/_layout.scss */
 .playlist { float: right; }
 
-/* line 12, ../scss/_layout.scss */
+/* line 10, ../scss/_layout.scss */
 .logo { margin-top: 5%; text-align: center; }
-/* line 15, ../scss/_layout.scss */
+/* line 14, ../scss/_layout.scss */
 .logo .giel-logo { width: 100%; max-width: 200px; }
 
-/* line 21, ../scss/_layout.scss */
+/* line 20, ../scss/_layout.scss */
+span.icons { position: relative; color: #5C5858; background-color: #fff; border-radius: 50%; border: 3px white solid; padding: 2vw; font-size: 4vw; top: 3vw; }
+
+/* line 31, ../scss/_layout.scss */
 .tile-wrapper { width: 99%; margin: auto; }
 
-/* line 26, ../scss/_layout.scss */
+/* line 39, ../scss/_layout.scss */
 .clear { clear: both; }
 
-/* line 30, ../scss/_layout.scss */
+/* line 43, ../scss/_layout.scss */
 .tile { background-color: #5c5858; background-size: 100%; background-repeat: no-repeat; background-position: top center; width: 30vw; height: 30vw; margin: auto; border-radius: 5px; position: relative; }
-/* line 42, ../scss/_layout.scss */
+/* line 54, ../scss/_layout.scss */
 .tile h2 { position: absolute; bottom: -2vw; }
-/* line 46, ../scss/_layout.scss */
-.tile span.icons { opacity: 0; }
+/* line 58, ../scss/_layout.scss */
+.tile span.icons { opacity: 0; padding: 1vw; font-size: 3vw; float: right; top: 1vw; right: 1vw; }
 
-/* line 51, ../scss/_layout.scss */
+/* line 68, ../scss/_layout.scss */
 .item-wrapper { display: none; }
-/* line 53, ../scss/_layout.scss */
+/* line 71, ../scss/_layout.scss */
 .item-wrapper h2 { font-size: 5vw; border-top: 3px solid white; border-bottom: 3px solid white; border-bottom-radius: 3px; line-height: 0; padding: 2% 0; }
-/* line 61, ../scss/_layout.scss */
+/* line 79, ../scss/_layout.scss */
 .item-wrapper span.pink-icon { background-color: #d4008c; font-size: 3vw; padding: 1vw; border-radius: 5px; margin-right: 2vw; }
 
-/* line 70, ../scss/_layout.scss */
+/* line 88, ../scss/_layout.scss */
 .content { margin: 0 10%; }
-/* line 72, ../scss/_layout.scss */
+/* line 91, ../scss/_layout.scss */
 .content button.pink { background-color: #d4008c; color: white; }
-/* line 76, ../scss/_layout.scss */
+/* line 95, ../scss/_layout.scss */
 .content button.white { background-color: white; color: #d4008c; }
-/* line 80, ../scss/_layout.scss */
+/* line 99, ../scss/_layout.scss */
 .content button.grey { background-color: #bdbdbd; color: white; }
-/* line 84, ../scss/_layout.scss */
-.content img { width: 100%; }
-/* line 87, ../scss/_layout.scss */
-.content h3 { text-align: center; }
-/* line 90, ../scss/_layout.scss */
-.content .recorder { width: 90%; height: 100%; border-radius: 1vw; background-color: white; text-align: center; padding: 5%; margin-top: 10%; }
-/* line 98, ../scss/_layout.scss */
-.content .recorder button { width: 40%; position: relative; bottom: 0vw; }
 /* line 103, ../scss/_layout.scss */
+.content img { width: 100%; }
+/* line 106, ../scss/_layout.scss */
+.content h3 { text-align: center; }
+/* line 109, ../scss/_layout.scss */
+.content .video { width: 90%; height: 40vw; border-radius: 1vw; background-image: url("../img/pierceBrothers.jpg"); background-size: 100%; background-repeat: no-repeat; background-position: top center; padding: 5%; margin-top: 10%; position: relative; text-align: center; }
+/* line 121, ../scss/_layout.scss */
+.content .video span { position: absolute; top: 38%; left: 44%; }
+/* line 126, ../scss/_layout.scss */
+.content .video span.icon-play { background: linear-gradient(to right, transparent, #ffffff, transparent); line-height: 0.5; font-size: 8vw; }
+/* line 132, ../scss/_layout.scss */
+.content .recorder { width: 90%; height: 100%; border-radius: 1vw; background-color: white; text-align: center; padding: 5%; margin-top: 10%; }
+/* line 141, ../scss/_layout.scss */
+.content .recorder button { width: 40%; position: relative; bottom: 0vw; }
+/* line 146, ../scss/_layout.scss */
 .content .recorder .top { margin: 1% auto; background-color: #a9f5f2; border: 2px solid rgba(92, 88, 88, 0.2); border-top-left-radius: 1vw; border-top-right-radius: 1vw; width: 96%; height: 8vw; }
-/* line 112, ../scss/_layout.scss */
+/* line 155, ../scss/_layout.scss */
 .content .recorder .bottom { margin: -2% auto; background-color: #a9f5f2; border-bottom: 2px solid rgba(92, 88, 88, 0.2); border-left: 2px solid rgba(92, 88, 88, 0.2); border-right: 2px solid rgba(92, 88, 88, 0.2); border-top: 1px solid rgba(92, 88, 88, 0.2); border-bottom-left-radius: 1vw; border-bottom-right-radius: 1vw; width: 96%; height: 8vw; }
-/* line 125, ../scss/_layout.scss */
-.content .recorder .line { border-top: 2px solid rgba(92, 88, 88, 0.2); }
-/* line 128, ../scss/_layout.scss */
+/* line 168, ../scss/_layout.scss */
 .content .recorder p { color: black; font-size: 6vw; }
