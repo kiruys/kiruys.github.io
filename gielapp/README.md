@@ -5,16 +5,16 @@ Mobile web version of Giel Beelen app
 
 Site shows an overview of items related to the Giel Beelen morning show on 3FM.
 Put together with HTML5, CSS3, and JavaScript (by Kirsten Ruys).
-Tested in Chrome, Safari, Firefox, and iOS7.
+Tested in Chrome, Safari, Firefox, IE11, and iOS7.
 Site is fully responsive: Item tiles, margins, font-sizes, buttons, icons all resize accordingly.
 
 Getting started:
 ----------------
-Site can be run using a Python server: In Terminal go to 'gielapp' folder and start a server with '$ python -m SimpleHTTPServer'. In your favorite browser go to 'localhost:8000'.
+Site can be run using a local webserver. An easy way with Python: In your terminal go to 'gielapp' folder and start a server with '$ python -m SimpleHTTPServer'. In your favorite browser go to 'localhost:8000'.
 
 Site is also publicly available at 'http://kiruys.github.io/gielapp/'.
 
-SASS files are compiled to 'showcase.css' with compass (in Terminal go to 'gielapp/static/scss' and start compass with '$ compass watch').
+SASS files are compiled to 'showcase.css' with compass (in your terminal go to 'gielapp/static/scss' and start compass with '$ compass watch'). All scss files are combined in 'gielapp/static/scss/_all.scss'.
 
 Structure:
 ----------

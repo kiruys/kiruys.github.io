@@ -13,19 +13,19 @@
 
 	.giel-logo {
 		width: 100%;
-		max-width: 200px;
+		max-width: 300px;
 	}
 }
 
 span.icons {
-    position: relative;
-    color: #5C5858;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 3px #fff solid;
-    padding: 2vw;
-    font-size: 4vw;
-    top: 3vw;
+	position: relative;
+	color: #5C5858;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 3px #fff solid;
+	padding: 2vw;
+	font-size: 4vw;
+	top: 3vw;
 }
 
 .tile-wrapper {
@@ -42,8 +42,7 @@ span.icons {
 	background-size:100%;
 	background-repeat: no-repeat;
 	background-position: top center;
-	width: 30vw;
-    height: 30vw;
+	width: 95%;
 	margin: auto;
 	border-radius: 5px;
 	position: relative;
@@ -137,7 +136,7 @@ span.icons {
 		button {
 			width: 40%;
 			position: relative;
-			bottom: 0vw;
+			bottom: 0;
 		}
 		.top {
 			margin: 1% auto;

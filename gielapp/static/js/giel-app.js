@@ -80,23 +80,62 @@ $(document).ready(function () {
 	function setPhoto(tile, photo) {	
 		if (photo !== '') {
 			photo = 'static/img/' + photo;
-			$('.tile').eq(tile).css({'background': 'url("' + photo + '")', 'background-size': '100%' });
+			$('.tile').eq(tile).css({'background': 'url("' + photo + '")', 'background-size': '100%'});
 		}
 	}
 
 });
 
 $(window).resize(function(e) {
-   setMargins();
+	setMargins();
 });
 
 /**
- * computes and sets vertical margins between tiles based on horizontal margins between tiles.
+ * Computes and sets vertical margins between tiles based on horizontal margins between tiles.
  */
 function setMargins() {
 	var val = $('.tile').offset().left - $('.tile-wrapper').offset().left;
+
+	safariHack();
+
 	$('.tile').each(function(){
+		$(this).height($(this).width());
 		$(this).css({'margin-bottom': val, 'margin-top': val});
 	});
+}
+
+/**
+ * Ugly hack for Safari to reload sizes that are indicated in vw.
+ */
+function safariHack() {
+	var $tile, $item, $video, $recorder;
+	$tile = $('.tile');
+	$item = $('.item-wrapper');
+	$video = $('.video');
+	$recorder = $('.recorder');
+
+	$('.icons').css({'padding': '2vw', 'font-size': '4vw', 'top': '3vw'});
+	$('h1').css({'font-size': '8vw'});
+	$('h2').css({'font-size': '4vw', 'line-height': '4vw'});
+	$('p').css({'font-size': '4vw'});
+	$tile.find('.icons').css({'padding': '1vw', 'font-size': '3vw', 'top': '1vw', 'right': '1vw'});
+	$tile.find('h2').css({'bottom': '-2vw'});
+
+	$item.find('h2').css({'font-size': '5vw', 'line-height': 0});
+	$item.find('h3').css({'font-size': '8vw', 'line-height': '8vw'});
+	$item.find('.pink-icon').css({'font-size': '3vw', 'padding': '1vw', 'margin-right': '2vw'});
+
+	$video.css({'height': '40vw', 'border-radius': '1vw'});
+	$video.find('.icon-play').css({'font-size': '8vw', 'top':'30%'});
+
+	$recorder.css({'border-radius': '1vw'});
+	$recorder.find('.top').css({'border-top-left-radius': '1vw', 'border-top-right-radius': '1vw', 'height': '8vw'});
+	$recorder.find('.bottom').css({'border-bottom-left-radius': '1vw', 'border-bottom-right-radius': '1vw', 'height': '8vw'});
+	$recorder.find('p').css({'font-size': '6vw'});
+
+	$('button, table').css({'font-size': '3.5vw'});
+	$('button table span').css({'top': '0'});
+
+	$('textarea').css({'font-size': '3vw', 'height': '30vw'});
 }
 
