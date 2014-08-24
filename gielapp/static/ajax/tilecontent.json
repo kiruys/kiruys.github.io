@@ -26,7 +26,7 @@
 		"photo": "rubenHein.jpg",
 		"itemTitle":"Ruben Hein!",
 		"subTitle": "",
-		"itemContent": "<img src='/static/img/rubenHein2.jpg'>"
+		"itemContent": "<img src='static/img/rubenHein2.jpg'>"
 	},
 	{	"icon": "camera",
 		"title": "Stuur je foto!",
