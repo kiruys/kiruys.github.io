@@ -6,11 +6,15 @@
  * - an item can be closed by clicking/touching the cross, or the overview icon
  */
 
+window.addEventListener('load', function () {
+	FastClick.attach(document.body);
+}, false); 
+
 $(document).ready(function () {
 
 	var overviewPos = {};
 
-	FastClick.attach(document.body);
+	//FastClick.attach(document.body);
 
 	$('.tile-wrapper').on('click touch', openItem);
 	$('.playlist').on('click touch', showPlaylistAlert);
