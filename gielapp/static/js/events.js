@@ -2,13 +2,15 @@
 /**
  * event triggered functionality:
  * - a tile can be clicked/touched to open the item
- * - the music icon can be clicked/touched to show the playlist
+ * - the music icon in the upper, navigation part can be clicked/touched to show the playlist
  * - an item can be closed by clicking/touching the cross, or the overview icon
  */
 
 $(document).ready(function () {
 
 	var overviewPos = {};
+
+	FastClick.attach(document.body);
 
 	$('.tile-wrapper').on('click touch', openItem);
 	$('.playlist').on('click touch', showPlaylistAlert);
@@ -26,6 +28,11 @@ $(document).ready(function () {
 		tile = $(evt.target).closest('.tile');
 		i = $('.tile-wrapper .tile').index(tile);
 		content = '';
+
+		// when an empty tile is clicked the function is aborted
+		if (i >= tileContent.length) {
+			return;
+		}
 
 		if (tileContent[i].subTitle !== '') {
 			content += '<h3>' + tileContent[i].subTitle + '</h3>';
